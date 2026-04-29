@@ -17,33 +17,64 @@
     >
 
       <a-assets>
-        <!-- 4 VIDEOS -->
+        <!-- 5 VIDEOS -->
         <video id="video0" src="./assets/animation/video0.mp4" preload="auto" loop muted playsinline webkit-playsinline></video>
         <video id="video1" src="./assets/animation/video1.mp4" preload="auto" loop muted playsinline webkit-playsinline></video>
         <video id="video2" src="./assets/animation/video2.mp4" preload="auto" loop muted playsinline webkit-playsinline></video>
         <video id="video3" src="./assets/animation/video3.mp4" preload="auto" loop muted playsinline webkit-playsinline></video>
+        <video id="video4" src="./assets/animation/video4.mp4" preload="auto" loop muted playsinline webkit-playsinline></video>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <!-- TARGET 0 -->
       <a-entity id="target0" mindar-image-target="targetIndex: 0">
-        <a-video src="#video0" width="3" height="1.5" position="0 0 0"></a-video>
+        <a-video
+          src="#video0"
+          width="3"
+          height="1.5"
+          position="0 0 0">
+        </a-video>
       </a-entity>
 
       <!-- TARGET 1 -->
       <a-entity id="target1" mindar-image-target="targetIndex: 1">
-        <a-video src="#video1" width="3" height="1.5" position="0.5 0 0"></a-video>
+        <a-video
+          src="#video1"
+          width="3"
+          height="1.5"
+          position="0.5 0 0">
+        </a-video>
       </a-entity>
 
       <!-- TARGET 2 -->
       <a-entity id="target2" mindar-image-target="targetIndex: 2">
-        <a-video src="#video2" width="3" height="1.5" position="0.5 0 0"></a-video>
+        <a-video
+          src="#video2"
+          width="3"
+          height="1.5"
+          position="0.5 0 0">
+        </a-video>
       </a-entity>
 
       <!-- TARGET 3 -->
       <a-entity id="target3" mindar-image-target="targetIndex: 3">
-        <a-video src="#video3" width="2.25" height="1.125" position="0 0 0"></a-video>
+        <a-video
+          src="#video3"
+          width="2.25"
+          height="1.125"
+          position="0 0 0">
+        </a-video>
+      </a-entity>
+
+      <!-- TARGET 4 -->
+      <a-entity id="target4" mindar-image-target="targetIndex: 4">
+        <a-video
+          src="#video4"
+          width="3"
+          height="1.5"
+          position="0 0 0">
+        </a-video>
       </a-entity>
 
     </a-scene>
@@ -53,7 +84,8 @@
         { el: document.querySelector("#target0"), video: document.querySelector("#video0") },
         { el: document.querySelector("#target1"), video: document.querySelector("#video1") },
         { el: document.querySelector("#target2"), video: document.querySelector("#video2") },
-        { el: document.querySelector("#target3"), video: document.querySelector("#video3") }
+        { el: document.querySelector("#target3"), video: document.querySelector("#video3") },
+        { el: document.querySelector("#target4"), video: document.querySelector("#video4") }
       ];
 
       targets.forEach(({ el, video }, index) => {
